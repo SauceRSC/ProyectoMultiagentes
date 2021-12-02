@@ -3293,17 +3293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f652ebe4e7878f6409866ef00743bc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  semaforo: 1
-  cars:
-  - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
-  - {fileID: 1646981259178978, guid: 2dc42346e5313b34c93d598a61994629, type: 3}
-  - {fileID: 1646981259178978, guid: 512151c1530b99343a884b12ee9c5e1e, type: 3}
-  - {fileID: 1646981259178978, guid: ab26596a331d7ee43a3e9d29e2be9f84, type: 3}
-  array:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  carros: []
 --- !u!4 &1901943601
 Transform:
   m_ObjectHideFlags: 0
