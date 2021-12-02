@@ -159,11 +159,13 @@ class Car(ap.Agent):
                 self.currentVelocity = min(self.currentVelocity + 5, self.MaxVelocity)
             elif nextSemaforo.color == 2 or nextSemaforo.color == 0:
                 self.currentVelocity = max(self.currentVelocity - 5, 5)
-                if distEntreCocheYSemaforo < 10:
+                if distEntreCocheYSemaforo < 20:
                     self.currentVelocity = 0
                     if not self.queued:
                         modelInstance.cola.put(nextSemaforo)
                         self.queued = True
+                elif distEntreCocheYSemaforo < 40:
+                    self.currentVelocity = int(self.currentVelocity/2)
         else:
             self.currentVelocity = min(self.currentVelocity + 5, self.MaxVelocity)
             self.queued = False
@@ -173,10 +175,10 @@ class Car(ap.Agent):
 
 parameters = {
     'step_time': 1,
-    'x': 100,
-    'y': 100,
+    'x': 200,
+    'y': 200,
     'steps': 100,
-    'cars':3,
+    'cars':5,
     'yellowTime':10,
     'greenTime':15
 }
