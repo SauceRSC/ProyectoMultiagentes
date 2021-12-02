@@ -154,21 +154,24 @@ class Car(ap.Agent):
         diffEntreCocheYSemaforo = [posSemaforo[0] - posActual[0], posSemaforo[1] - posActual[1]]
         distEntreCocheYSemaforo = (diffEntreCocheYSemaforo[0] * self.currentDirection[0]) + (diffEntreCocheYSemaforo[1] * self.currentDirection[1])
 
+
         if distEntreCocheYSemaforo > 0:
             if nextSemaforo.color == 1:
                 self.currentVelocity = min(self.currentVelocity + 5, self.MaxVelocity)
             elif nextSemaforo.color == 2 or nextSemaforo.color == 0:
                 self.currentVelocity = max(self.currentVelocity - 5, 5)
-                if distEntreCocheYSemaforo < 10:
+                if distEntreCocheYSemaforo < 20:
                     self.currentVelocity = 0
                     if not self.queued:
                         modelInstance.cola.put(nextSemaforo)
                         self.queued = True
+                elif distEntreCocheYSemaforo < 40:
+                    self.currentVelocity = int(self.currentVelocity / 2)
         else:
             self.currentVelocity = min(self.currentVelocity + 5, self.MaxVelocity)
             self.queued = False
-        
-        if distEntreCocheYCocheEnfrente > 0 and distEntreCocheYCocheEnfrente <=10:
+
+        if distEntreCocheYCocheEnfrente > 0 and distEntreCocheYCocheEnfrente <= 10:
             self.currentVelocity = 0
 
 parameters = {

@@ -1102,8 +1102,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463424330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6586, y: 0, z: -3.9186}
-  m_LocalScale: {x: 2.4634, y: 2.4634, z: 2.4634}
+  m_LocalPosition: {x: 72.3, y: 1.21, z: 25}
+  m_LocalScale: {x: 9, y: 6, z: 9}
   m_Children:
   - {fileID: 229079223}
   - {fileID: 112130217}
@@ -2150,13 +2150,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2714563, y: 0.01189844, z: 0.0023976276, w: 0.9623742}
-  m_LocalPosition: {x: -1.97, y: 6, z: -9.2}
+  m_LocalRotation: {x: 0.39003012, y: 0.011503709, z: 0.0038712018, w: 0.9207221}
+  m_LocalPosition: {x: 191.6, y: 21.2, z: 170.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 31.495, y: 1.627, z: 0.744}
+  m_LocalEulerAnglesHint: {x: 45.9, y: 1.993, z: 1.326}
 --- !u!1 &1094708367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3207,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3216,7 +3224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.37067
       objectReference: {fileID: 0}
     - target: {fileID: 1892083345145105366, guid: 566725c8dfb238f419a8e9342ffaab05, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3293,7 +3301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f652ebe4e7878f6409866ef00743bc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carros: []
+  carros:
+  - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
+  semaforos:
+  - {fileID: 5980613504688385315, guid: da2b3557f9ef2a8438ae977a154bc015, type: 3}
 --- !u!4 &1901943601
 Transform:
   m_ObjectHideFlags: 0
